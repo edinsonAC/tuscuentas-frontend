@@ -1,0 +1,40 @@
+import { TareaPredeterminada } from '../tarea-predeterminada/tarea-predeterminada';
+
+export class TareaEmpresa {
+    taemId: number;
+    cafeId: number;
+    emprId: number;
+    estaId: number;
+    taemComentarobligatorio: number;
+    taemDiahabilsiguiente: number;
+    taemEstado: number;
+    taemFechafinal: string;
+    taemFechainicial: string;
+    taemFecharegistro: string;
+    taemGerente: string;
+    taem_idAprobacion: string;
+    taem_idEjecucion: string;
+    taem_idRecepcion: string;
+    taem_idRevision: string;
+    taemImpuesto: string;
+    taemLeido: number;
+    taemPasoaprobacionCargoempresa: string;
+    taemPasoaprobacionDiashabiles: string;
+    taemPasoaprobacionDiasprorroga: string;
+    taemPasoaprobacionEstado: string;
+    taemPasoejecucionCargoempresa: string;
+    taemPasoejecucionDiashabiles: string;
+    taemPasoejecucionDiasprorroga: string;
+    taemPasoejecucionEstado: string;
+    taemPasorecepcionCargoempresa: string;
+    taemPasorecepcionDiashabiles: string;
+    taemPasorecepcionDiasprorroga: string;
+    taemPasorecepcionEstado: string;
+    taemPasorevisionCargoempresa: string;
+    taemPasorevisionDiashabiles: string;
+    taemPasorevisionDiasprorroga: string;
+    taemPasorevisionEstado: string;
+    taemRecurrente: number;
+    taemRegistradopor: string;
+    tareaPredeterminada: TareaPredeterminada;
+}

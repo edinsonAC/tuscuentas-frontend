@@ -1,0 +1,395 @@
+@font-face {
+  font-family: 'tu-icomoon';
+  src:  url('fonts/tu-icomoon.eot?wrnk48');
+  src:  url('fonts/tu-icomoon.eot?wrnk48#iefix') format('embedded-opentype'),
+    url('fonts/tu-icomoon.ttf?wrnk48') format('truetype'),
+    url('fonts/tu-icomoon.woff?wrnk48') format('woff'),
+    url('fonts/tu-icomoon.svg?wrnk48#tu-icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="tu-icon-"], [class*=" tu-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'tu-icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tu-icon-paperclip:before {
+  content: "\e96f";
+  color: #3f8827;
+}
+.tu-icon-photoplus:before {
+  content: "\e970";
+  color: #3f8827;
+}
+.tu-icon-filter-homework:before {
+  content: "\e96e";
+}
+.tu-icon-starBox:before {
+  content: "\e96d";
+}
+.tu-icon-asignarx:before {
+  content: "\e967";
+}
+.tu-icon-devolverx:before {
+  content: "\e969";
+}
+.tu-icon-lupax:before {
+  content: "\e96a";
+}
+.tu-icon-okx:before {
+  content: "\e96b";
+}
+.tu-icon-timex:before {
+  content: "\e96c";
+}
+.tu-icon-hand:before {
+  content: "\e963";
+}
+.tu-icon-bocina:before {
+  content: "\e964";
+}
+.tu-icon-mail2:before {
+  content: "\e965";
+}
+.tu-icon-paper2:before {
+  content: "\e966";
+}
+.tu-icon-box:before {
+  content: "\e968";
+}
+.tu-icon-direccion:before {
+  content: "\e962";
+}
+.tu-icon-bocina2:before {
+  content: "\e95b";
+}
+.tu-icon-box2:before {
+  content: "\e95c";
+}
+.tu-icon-hand-2:before {
+  content: "\e95d";
+}
+.tu-icon-mail20:before {
+  content: "\e95e";
+}
+.tu-icon-paper20:before {
+  content: "\e95f";
+}
+.tu-icon-pc:before {
+  content: "\e960";
+}
+.tu-icon-star2:before {
+  content: "\e961";
+}
+.tu-icon-subtract:before {
+  content: "\e95a";
+}
+.tu-icon-empresas:before {
+  content: "\e959";
+}
+.tu-icon-menu:before {
+  content: "\e958";
+}
+.tu-icon-mail:before {
+  content: "\e956";
+}
+.tu-icon-call:before {
+  content: "\e957";
+}
+.tu-icon-avion:before {
+  content: "\e955";
+}
+.tu-icon-ocultar:before {
+  content: "\e954";
+}
+.tu-icon-flecha:before {
+  content: "\e91d";
+}
+.tu-icon-adjuntar:before {
+  content: "\e91e";
+  color: #5d6055;
+}
+.tu-icon-asignar:before {
+  content: "\e91f";
+}
+.tu-icon-comentarios:before {
+  content: "\e920";
+}
+.tu-icon-devolver:before {
+  content: "\e921";
+}
+.tu-icon-eficiencia-por-empresa:before {
+  content: "\e922";
+}
+.tu-icon-eficiencia-por-interventor:before {
+  content: "\e923";
+}
+.tu-icon-enviar:before {
+  content: "\e924";
+}
+.tu-icon-escalar:before {
+  content: "\e925";
+}
+.tu-icon-observada:before {
+  content: "\e926";
+}
+.tu-icon-signo-de-interrogacion:before {
+  content: "\e927";
+}
+.tu-icon-bloqueo-de-cuentas:before {
+  content: "\e928";
+}
+.tu-icon-campana:before {
+  content: "\e929";
+}
+.tu-icon-chek:before {
+  content: "\e92a";
+}
+.tu-icon-completar-informacion:before {
+  content: "\e92b";
+}
+.tu-icon-corbata:before {
+  content: "\e92c";
+}
+.tu-icon-empresa-en-mora .path1:before {
+  content: "\e92d";
+  color: rgb(255, 255, 255);
+}
+.tu-icon-empresa-en-mora .path2:before {
+  content: "\e92e";
+  margin-left: -1.01171875em;
+  color: rgb(255, 255, 255);
+}
+.tu-icon-empresa-en-mora .path3:before {
+  content: "\e92f";
+  margin-left: -1.01171875em;
+  color: rgb(255, 255, 255);
+}
+.tu-icon-empresa-en-mora .path4:before {
+  content: "\e930";
+  margin-left: -1.01171875em;
+  color: rgb(255, 255, 255);
+}
+.tu-icon-empresa-en-mora .path5:before {
+  content: "\e931";
+  margin-left: -1.01171875em;
+  color: rgb(55, 52, 53);
+}
+.tu-icon-empresa-en-mora .path6:before {
+  content: "\e932";
+  margin-left: -1.01171875em;
+  color: rgb(55, 52, 53);
+}
+.tu-icon-empresa-en-mora .path7:before {
+  content: "\e933";
+  margin-left: -1.01171875em;
+  color: rgb(55, 52, 53);
+}
+.tu-icon-empresa-en-mora .path8:before {
+  content: "\e934";
+  margin-left: -1.01171875em;
+  color: rgb(55, 52, 53);
+}
+.tu-icon-empresa-en-mora .path9:before {
+  content: "\e935";
+  margin-left: -1.01171875em;
+  color: rgb(55, 52, 53);
+}
+.tu-icon-empresa-en-mora .path10:before {
+  content: "\e936";
+  margin-left: -1.01171875em;
+  color: rgb(55, 52, 53);
+}
+.tu-icon-engranaje-panel-de-gestion:before {
+  content: "\e937";
+}
+.tu-icon-factura-por-vencer:before {
+  content: "\e938";
+}
+.tu-icon-final-pruebas:before {
+  content: "\e939";
+}
+.tu-icon-firmar-contrato:before {
+  content: "\e93a";
+}
+.tu-icon-indicadores:before {
+  content: "\e93b";
+}
+.tu-icon-salir:before {
+  content: "\e93c";
+}
+.tu-icon-tarea-abierta:before {
+  content: "\e93d";
+  color: #5d6055;
+}
+.tu-icon-tarea-atrasada:before {
+  content: "\e93e";
+  color: #5d6055;
+}
+.tu-icon-tareas-pendientes:before {
+  content: "\e93f";
+  color: #5d6055;
+}
+.tu-icon-abogados:before {
+  content: "\e940";
+}
+.tu-icon-constructora:before {
+  content: "\e941";
+}
+.tu-icon-droguera:before {
+  content: "\e942";
+}
+.tu-icon-lacteos:before {
+  content: "\e943";
+}
+.tu-icon-publicidad:before {
+  content: "\e944";
+}
+.tu-icon-ropa:before {
+  content: "\e945";
+}
+.tu-icon-tecnologa:before {
+  content: "\e946";
+}
+.tu-icon-zapatera:before {
+  content: "\e947";
+}
+.tu-icon-calendario-tributario:before {
+  content: "\e948";
+}
+.tu-icon-cargue-contenidos:before {
+  content: "\e949";
+}
+.tu-icon-cargue-de-tarea-predeterminadas:before {
+  content: "\e94a";
+}
+.tu-icon-empresa-panel-de-gestion:before {
+  content: "\e94b";
+}
+.tu-icon-equis:before {
+  content: "\e94c";
+}
+.tu-icon-facturacion:before {
+  content: "\e94d";
+}
+.tu-icon-gestionar-tareas:before {
+  content: "\e94e";
+}
+.tu-icon-parametrizar-contador:before {
+  content: "\e94f";
+}
+.tu-icon-roles:before {
+  content: "\e950";
+}
+.tu-icon-tabla-de-precios:before {
+  content: "\e951";
+}
+.tu-icon-tipo-de-empresa:before {
+  content: "\e952";
+}
+.tu-icon-usuarios:before {
+  content: "\e953";
+}
+.tu-icon-siigo:before {
+  content: "\e91c";
+}
+.tu-icon-engrane:before {
+  content: "\e906";
+}
+.tu-icon-key:before {
+  content: "\e91a";
+}
+.tu-icon-perfil:before {
+  content: "\e91b";
+}
+.tu-icon-chat-bubble:before {
+  content: "\e917";
+}
+.tu-icon-group:before {
+  content: "\e918";
+}
+.tu-icon-plus:before {
+  content: "\e919";
+}
+.tu-icon-checked:before {
+  content: "\e910";
+}
+.tu-icon-excel:before {
+  content: "\e912";
+}
+.tu-icon-gear:before {
+  content: "\e913";
+}
+.tu-icon-hourglass:before {
+  content: "\e914";
+}
+.tu-icon-presentacion:before {
+  content: "\e915";
+}
+.tu-icon-send:before {
+  content: "\e916";
+}
+.tu-icon-chart .path1:before {
+  content: "\e90d";
+  color: rgb(255, 94, 82);
+}
+.tu-icon-chart .path2:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(93, 96, 85);
+}
+.tu-icon-chart .path3:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(67, 176, 54);
+}
+.tu-icon-star:before {
+  content: "\e90c";
+}
+.tu-icon-paper-list-pensil:before {
+  content: "\e90a";
+}
+.tu-icon-see-check:before {
+  content: "\e90b";
+}
+.tu-icon-close:before {
+  content: "\e909";
+}
+.tu-icon-home:before {
+  content: "\e908";
+}
+.tu-icon-sign-out:before {
+  content: "\e907";
+}
+.tu-icon-clip:before {
+  content: "\e911";
+}
+.tu-icon-papelera:before {
+  content: "\e905";
+}
+.tu-icon-eye:before {
+  content: "\e904";
+}
+.tu-icon-add-user:before {
+  content: "\e900";
+}
+.tu-icon-building:before {
+  content: "\e901";
+}
+.tu-icon-paper-pensil:before {
+  content: "\e902";
+}
+.tu-icon-papers:before {
+  content: "\e903";
+}

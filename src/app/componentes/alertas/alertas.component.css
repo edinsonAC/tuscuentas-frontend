@@ -1,0 +1,98 @@
+#divAlertas {
+    padding: 8px 0px 0px 0px !important;
+}
+
+#divAlertas > header {
+    padding-left: 8px;
+}
+.tc-aside__txt {
+    color: #3F8827;
+}
+
+p {
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+a, div, h1, h2, h3, h4, h5, p, span {
+    text-shadow: none;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.alturaDeAlertas {
+    height: auto;
+    max-height: calc(100vh - 275px);
+    overflow-y: auto;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+.h3, h3 {
+    font-size: 1.56rem;
+}
+
+#alertas > div.tc-slot:nth-of-type(2n+1) {
+    background-color: #f3f3f3 !important;
+}
+
+.tc-slot {
+    padding: 5px !important;
+    align-items: start !important;
+}
+
+.tc-slot__box {
+    display: flex;
+}
+.tc-slot__box {
+    width: 100%;
+}
+.pad-0 {
+    padding: 0 !important;
+}
+
+.mb-2, .my-2 {
+    margin-bottom: 0.5rem !important;
+}
+.mr-2, .template-demo > .btn, .ajax-upload-dragdrop .template-demo > .ajax-file-upload, .swal2-modal .swal2-buttonswrapper .template-demo > .swal2-styled, .wizard > .actions .template-demo > a, .template-demo > .btn-toolbar, .template-demo > .btn-group, .template-demo .dropdown, .mx-2 {
+    margin-right: 0.5rem !important;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.alertaRoja {
+    border: 5px solid red;
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    flex-direction: column;
+    background-color: red;
+    height: 40px;
+    width: 40px;
+}
+
+.spaceInLine > p {
+    line-height: 16px;
+}
+.tc-slot__subtitle {
+    font-weight: 600;
+    color: #3F8827;
+}
+.mb-0, .my-0 {
+    word-break: break-word;
+    margin-bottom: 0 !important;
+}
+
+.tc-slot__txt {
+    font-size: 0.7rem;
+}

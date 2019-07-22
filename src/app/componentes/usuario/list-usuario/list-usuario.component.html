@@ -1,0 +1,56 @@
+<div class="card tc-card-all border-box" id="gestionUsuario">
+  <div class="card-body">
+    <div class="row flex-end">
+      <div class="col-md-3 flex-end">
+        <input class="btn btn-light btn-mini ocultar-iconons" type="button" value="Volver">
+      </div>
+    </div>
+    <br>
+    <div class="row col-md-9 btn-excel">
+      <div class="col-md-5">
+        <div class="col-sm-12">
+          <h4 class="card-title">Parametrizar Usuario</h4>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pointer">
+          <p class="d-flex align-items-center flex-row ">
+            <!--<i class="fa fa-building tc-config__icon"></i>-->
+            <i class="tu-icon-excel icon-i "></i>
+            <span>
+              Descargar excel
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="col-sm-4 form-group">
+          <button class="btn btn-success btn-mini"><b>Registrar
+              Usuario</b></button>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="tablaAdminTusCuentas">
+      <div class="col-12" id="tabloide1">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>usuario</th>
+              <th>correo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let usuario of usuarios" >
+              <td  *ngIf="usuario.usuaId !='1'">{{usuario.usuaPrimernombre}}</td>
+              <td  *ngIf="usuario.usuaId !='1'">{{usuario.usuaPrimerapellido}}</td>
+              <td  *ngIf="usuario.usuaId !='1'">{{usuario.tipoUsuario.tiusDescripcion}}</td>
+              <td  *ngIf="usuario.usuaId !='1'">{{usuario.usuaCorreo}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

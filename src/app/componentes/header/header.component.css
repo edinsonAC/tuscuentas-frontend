@@ -1,0 +1,425 @@
+.navbar.horizontal-layout {
+    font-family: "Open Sans", sans-serif;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.ec-hidden {
+    display: none;
+}
+
+.fixed-go {
+    position: fixed !important;
+    z-index: 100;
+}
+
+.tc-header__nav > .tc-header__item > h1 > img {
+    width: 150px;
+}
+
+.tc-header__nav > .tc-header__item > i {
+    font-size: 20px;
+    background-image: none !important;
+    padding: 0px 4px !important;
+    align-self: center;
+    width: auto !important;
+    height: auto !important;
+}
+
+.tc-header__nav > .tc-header__item > h1 {
+    margin: 0 0 0 12px;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.flex-row, .email-wrapper .message-body .attachments-sections ul li {
+    flex-direction: row !important;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.tc-header__nav > div > div {
+    align-self: flex-end;
+}
+
+.mg-left20 {
+    margin-left: 20px;
+}
+
+.tc-header__figure {
+    display: flex;
+    align-items: center;
+    max-width: 470px;
+}
+
+.tc-header__nav > div {
+    display: flex;
+}
+
+
+.tc-header__nav > .tc-header__item {
+    display: flex;
+    flex-direction: row;
+}
+.tc-header__nav > div {
+    display: flex;
+}
+.tc-header__item_brand {
+    text-align: right;
+}
+
+.tc-header__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.tc-header__nav > div > .tc-header__figure > div.tc-header__img {
+    height: 50px;
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    border: none;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0 !important;
+}
+
+.tc-header__img {
+    display: block;
+    min-width: 100px;
+    max-width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 2px solid #3F8827;
+}
+
+.tc-header__nav > div > .tc-header__figure > .tc-header__caption > h4 {
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+
+.tc-header__nav > div > .tc-header__figure > .tc-header__caption {
+    padding-left: 0;
+}
+
+.flex-row, .email-wrapper .message-body .attachments-sections ul li {
+    flex-direction: row !important;
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px;
+    }
+    
+}
+
+@media (max-width: 1920px) and (min-width: 1300px){
+    .count-indicator {
+        padding-bottom: 12px !important;
+    }
+}
+
+
+.navbar > .container, .navbar > .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    width: 100%;
+    padding-right: 12.5px;
+    padding-left: 12.5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.tc-btn_flat {
+    background-color: transparent;
+    border: none;
+    color: #3F8827;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.count-indicator {
+    padding-right: 0px !important;
+    padding-left: 6px !important;
+}
+
+a { 
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.dropdown .dropdown-toggle:after {
+    border: none;
+    margin-left: 0;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+
+}
+
+#imagenRecortada{
+    border-radius: 65px;
+}
+
+#imagenPerfil{
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+}
+
+.tc-header__figure > .popover, .tc-header__figure > .popover > .popover-content {
+    width: 264px !important;
+}
+
+#divImagen:first-of-type + div.popover > div:last-child > div > div > div:first-child {
+    margin-bottom: 10px;
+}
+
+.centrarDiv {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+figure.snip1205 {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    background: #00000000;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+#divImagen:first-of-type + div.popover > div:last-child > div > div > div:first-child > div:nth-child(2) {
+    display: flex;
+    padding-left: 0;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: block;
+    max-width: 276px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-break: normal;
+    word-spacing: normal;
+    white-space: normal;
+    line-break: auto;
+    font-size: 0.875rem;
+    word-wrap: break-word;
+    background-color: #f1f6ff;
+    background-clip: padding-box;
+    border: 1px solid #d5dcec;
+    border-radius: 0.3rem;
+}
+
+.popover{
+    border-radius: 10px;
+    box-shadow: 0px 3px 14px 3px #00000069;
+    top: 85px !important;
+    margin-left: 70px;
+    padding: 9px 14px;
+    width: 255px !important;
+    background-color: #ffff;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12.5px;
+    margin-left: -12.5px;
+}
+
+figure.snip1205 img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.preview {
+    margin: 4px !important;
+}
+
+#divImagen:first-of-type + div.popover > div:last-child > div > div > h5 {
+    color: #5a5a5a;
+    font-weight: bold !important;
+    text-align: center;
+    font-size: 17px;
+}
+
+#divImagen:first-of-type + div.popover > div:last-child > div > div > h5 {
+    color: #5a5a5a;
+    font-weight: bold !important;
+    text-align: center;
+    font-size: 17px;
+}
+
+h5.card-popover {
+    color: #5a5a5a;
+    font-weight: bold !important;
+    text-align: center;
+    font-size: 17px;
+}
+
+#divImagen:first-of-type + div.popover > div:last-child > div > div > div:nth-child(3) > div > div > input, #divImagen:first-of-type + div.popover > div:last-child > div > div > div:nth-child(5) > div > div > input {
+    border: 1px solid #397b23 !important;
+    /* width: 75%; */
+    /* margin: auto; */
+}
+
+.inputPerfil {
+    height: 25px;
+    border-radius: 7px !important;
+}
+
+.popover-title {
+    color: #397b23;
+    font-weight: bold;
+    height: 30px !important;
+    font-size: 15px !important;
+}
+
+.popover-text-perfil{
+    font-size: 14px;
+    align-self: center;
+    margin: 0;
+    font-weight: bold;
+    color: #5a5a5a;
+}
+
+.div-text-popover-perfil{
+    display: flex;
+    padding-left: 0;
+}
+
+.boton-popover {
+    background: #43B036;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+
+.end-boton-popover{
+    justify-content: space-evenly;
+}
+
+#divImagen:first-of-type + div.popover {
+    border-radius: 10px;
+    box-shadow: 0px 3px 14px 3px #00000069;
+    top: 85px !important;
+    margin-left: 81px;
+}
+
+.btn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+figure.snip1205 i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #000000;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+figure.snip1205 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+figure.snip1205 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+figure.snip1205 {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    background: #00000000;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.preview--rounded {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}

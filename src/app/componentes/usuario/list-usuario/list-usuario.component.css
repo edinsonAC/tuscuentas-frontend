@@ -1,0 +1,68 @@
+.card .card-body {
+    padding: 35px 25px;
+}
+.card > div {
+    height: 50%;
+}
+
+.card-body {
+    min-height: 140px;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 15px !important;
+}
+
+.tc-card-all{
+    border: none;
+}
+
+.card-title {
+    color: #3F8827;
+}
+
+.card-title {
+    margin-bottom: 1.125rem;
+    text-transform: capitalize;
+}
+
+@media (max-width: 1920px) and (min-width: 768px){
+    .btn-excel {
+        width: 90% !important;
+        z-index: 2;
+        margin-right: auto !important;
+        max-width: 90%;
+    }
+}
+
+
+.h4, h4 {
+    font-size: 1.13rem;
+}
+
+.btn-excel > div:nth-child(2) > div > p > i {
+    padding: 0px;
+    color: green;
+}
+
+.icon-i {
+    font-size: xx-large;
+    padding-right: 14px;
+}
+
+.btn-excel > div:nth-child(2) > div > p {
+    flex-direction: column !important;
+}

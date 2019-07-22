@@ -1,0 +1,28 @@
+<div *ngIf="menus">
+  <div class="card-body">
+    <div *ngFor="let menu of menus; let i = index"
+      [className]="usuario.tipoUsuario.tiusId =='3' ? 'fullcard card pointer cardImage car' : 'card pointer cardImage car' " id="card{{i+1}}"
+      [style.backgroundImage]="'url(assets/images/' + menu.menuIcono + ')'">
+      <div>
+        <h1 class="h1a">{{menu.menuTitulo}}</h1>
+      </div>
+      <div class="row tc-config" style="margin-top: 0px;">
+        <div *ngFor="let funcionalidad of menu.funcionalidads; let j = index" [className]="usuario.tipoUsuario.tiusId !='3' ? 'col-3 col-md-3 table-responsive' : '' " 
+          style="margin-bottom: 10px;">
+          <a href="javascript:cargarPagina('<%=menu.get(i).getMenu().get(j).getFuncionalidad().get(k).getPagina()%>');"
+            class="d-flex align-items-center flex-column">
+            <!--<i class="fa fa-building tc-config__icon"></i>-->
+            <img src="assets/images/{{funcionalidad.funcIcono}}" height="60%" width="50%">
+            <span class="tc-config__txt">
+              {{funcionalidad.funcTitulo}}
+              <span class="tc-config__item-txt">
+                <!-- <i class="fa fa-chevron-right"></i>
+                           23-->
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+.loadergo{
+    position: fixed;
+    z-index: 1500;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.end{
+    display: flex;
+    justify-content: center;
+}
+.end-real{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.end-complement{
+    flex-direction: column;
+    align-items: center;
+}
+.borders {
+    border-radius: 5px;
+}
+.btn-primary, .wizard > .actions a {
+    color: #fff !important;
+    background-color: #3F8827 !important;
+    border-color: #3F8827 !important;
+}
+.pointer {
+    cursor: pointer;
+}
+
+.btn-mini {
+    padding: 4px 11px !important;
+    border-radius: 5px;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}

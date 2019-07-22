@@ -1,0 +1,83 @@
+.cardImage > div:last-child {
+    margin-top: 40%;
+    display: flex;
+}
+
+.cardImage > div {
+    height: 50%;
+}
+
+.tc-config__txt {
+    font-size: 12px;
+    color: #4A4A4A;
+}
+
+.tc-config__txt {
+    text-align: center;
+    width: 96%;
+    word-break: normal;
+}
+
+.cardImage{
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 2%;
+    padding-left: 1%;
+    background-size: cover;
+    width: 30% !important;
+    height: 565px !important;
+    text-align: -webkit-center;
+    margin: 1.5% !important;
+    border-radius: 21px !important;
+    background-color: transparent;
+}
+.card-body {
+    display: flex;
+    padding: 0px !important;
+}
+
+.h1a {
+    color: white;
+    text-shadow: 2px 3px rgba(0, 0, 0, 0.2196078431372549);
+    font-size: 31px;
+    text-align: center;
+}
+
+
+.fullcard{
+    width: 100% !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 0%;
+    height: 560px;
+}
+
+.fullcard > div.tc-config {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(#ffffff85 18%, white 42%) !important;
+    box-shadow: 0px -16px 26px 1px #ffffff85;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 0 !important;
+}
+
+.fullcard > div.tc-config > div {
+    margin-bottom: 10px;
+    width: 11%;
+    height: 60px;
+    font-size: 29px;
+    align-self: center;
+}
+
+.fullcard > div.tc-config > div a {
+    height: -webkit-fill-available;
+}
+.fullcard > div.tc-config > div > a > img {
+    width: 50%;
+    height: 50%;
+}

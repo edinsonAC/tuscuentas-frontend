@@ -1,0 +1,170 @@
+<nav class="navbar horizontal-layout col-lg-12 col-12 p-0 fixed-go"
+    onclick="$('#oscuridadMovil').removeClass('oscuridad');">
+    <div class="container d-flex flex-row">
+        <nav class="tc-header__nav  p-0">
+
+            <div class="tc-header__item tc-header__item_brand">
+                <h1 class="tc-header__title pointer" onclick="javascript:location.reload();">
+                    <img src="assets/images/logo.png" alt="tuscuentas.com" class="tc-header__logo">
+                    <span class="ec-hidden">tuscuentas.com</span>
+                </h1>
+                <i *ngIf="usuario.tipoUsuario.tiusId !='1'" class="tc-btn_flat tu-icon-gear pointer" id="botonMenu"
+                    onclick="cargarMenu();"></i>
+                <i class="tc-btn_flat tu-icon-add-user pointer" id="botonVendedor"
+                    onclick="javascript:cargarPagina('editar-contador-basico.jsp')" style="display: none;"></i>
+                <div class="nav-item dropdown">
+                    <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown"
+                        *ngIf="usuario.tipoUsuario.tiusId !='1'" onclick="hide_alrtaCampana();" href="#"
+                        data-toggle="dropdown">
+                        <i class="tu-icon-campana" style="font-size: 18px;color:green;"></i>
+                        <span class="count bg-warning" id="contaCampana" style="display: none;"></span>
+                    </a>
+                    <div class="pantalla-completa ocultar" id="oculta_alertaCampana" onclick="show_alertaCampana();">
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-left navbar-dropdown preview-list notificacionMovilGerente"
+                        aria-labelledby="notificationDropdown" id="alertaCampana"
+                        style="overflow-y: scroll;max-height: 350px;">
+                    </div>
+                </div>
+                <i style="font-size:24px;" class="tc-btn_flat tu-icon-menu pointer" id="tareaSupervisor"
+                    onclick="javascript:cargarPagina('tareas_supervisor_interventor.jsp')" style="display: none;"></i>
+                <i class="tu-icon-presentacion pointer" style="font-size: 18px;color:green;"></i>
+                <!--<i class="tu-icon-presentacion pointer"  onclick="loginLearning();" style="font-size: 18px;color:green;"></i> -->
+
+            </div>
+
+            <div class="">
+
+                <div class="tc-header__caption tc-header__caption_2" id="div-calificacion" style="display: none;">
+                    <i class="tu-icon-star tc-header__rating"></i>
+                    <span class="tc-header__score" id="calificacion"></span>
+                    <h4 class="tc-header__subtitle">Calificacin</h4>
+                </div>
+                <div class="tc-header__caption tc-header__caption_2" id="div-eficiencia" style="display: none;">
+                    <div class="alinearPorcentaje">
+                        <div style="width: 20px;height: 20px;" id="g2" class="gauge"></div>
+                        <span class="tc-header__score" id="eficienciaC">56 %</span>
+                    </div>
+                    <h4 class="tc-header__subtitle">Eficiencia</h4>
+                </div>
+                <div class="tc-header__caption tc-header__caption_2 mostrarMovil sirena "
+                    onclick="toggleAlertasMovil();" style="display: none;">
+                    <i class="tu-icon-siren"></i>
+                </div>
+
+                <div class="tc-header__figure flex-column mg-left20">
+                    <div class="tc-header__img rounded-circle mr-2 pointer" popoverTitle="Editar perfil"
+                        [popover]="myPopover" popoverPlacement="bottom" [popoverAnimation]="true" id="divImagen">
+                        <img id="imagenPerfil" height="100px" width="100px" alt="Avatar"
+                            src="http://localhost:8080/api/usuario/upload/img/{{usuario.usuaImgperfil}}">
+
+                        <popover-content #myPopover placement="left" [animation]="true" [closeOnClickOutside]="true">
+                            <div class="row">
+                                <div (click)="reset()" class="col-md-6 profile-bottom-img centrarDiv" id="img" data-toggle="modal"
+                                    data-target="#exampleModalLong">
+                                    <figure class="snip1205 rounded-circle"><img id="imgPerfil"
+                                            class="preview preview--rounded"
+                                            src="http://localhost:8080/api/usuario/upload/img/{{usuario.usuaImgperfil}}"
+                                            style="width: 60px;height: 60px;"><i class="fa fa-edit"></i>
+                                    </figure>
+                                </div>
+                                <div class="col-md-6 div-text-popover-perfil">
+                                    <h5 class="popover-text-perfil">Cambiar imagen de perfil</h5>
+                                </div>
+                            </div>
+                            <h5 class="card-popover">Cambiar contraseña</h5>
+                            <div class="row"><br>
+                                <div class="col-md-12">
+                                    <div class="form-group requerido"><input type="password"
+                                            class="form-control inputPerfil" placeholder="Contraseña nueva"
+                                            autocomplete="new-password" id="password" maxlength="20">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group requerido"><input type="password"
+                                            class="form-control inputPerfil" placeholder="Repetir Contraseña"
+                                            autocomplete="new-password" id="password2" maxlength="20">
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="card-popover">Contacto</h5>
+                            <div class="row">
+                                <div class="col-md-12 centrarDiv">
+                                    <div class="form-group requerido" style="width: 100%;"><input type="tel"
+                                            class="form-control inputPerfil" id="celular" name="celular" [(ngModel)]="usuario.usuaCelular" maxlength="10"
+                                            autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 end end-boton-popover">
+                                    <button type="button" class="btn boton-popover"
+                                        onclick="editarPerfilUser();">Guardar</button>
+                                    <button type="button" class="btn boton-popover" (click)='logout()'><i
+                                            class="tc-btn_flat tu-icon-sign-out" style="color:white;"></i>Salir</button>
+
+                                </div>
+                            </div>
+                        </popover-content>
+                    </div>
+                    <div class="tc-header__caption">
+                        <h4 class="tc-header__subtitle" id="nombre">{{usuario.usuaPrimernombre}}
+                            {{usuario.usuaPrimerapellido}}</h4>
+                        <p class="fa fa-star tc-header__rating" hidden>
+                            <span class="tc-header__score">8,5</span>
+                        </p>
+                    </div>
+                </div>
+                <!--creado boton menu-->
+                <div id="BurguerMenu" class="burguer-menu">
+                </div>
+                <!--creado boton menu-->
+            </div>
+
+        </nav>
+        <!--creado btn menu-burguer-->
+        <div id="btn_burguer_menu" class="nav-bottom">
+        </div>
+        <!--creado btn menu-burguer-->
+    </div>
+
+
+
+
+
+</nav>
+
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="file" (change)="fileChangeEvent($event)" />
+
+                <image-cropper
+                    [imageChangedEvent]="imageChangedEvent"
+                    [maintainAspectRatio]="true"
+                    [aspectRatio]="1 / 1"
+                    [resizeToWidth]="128"
+                    format="png"
+                    (imageCropped)="imageCropped($event)"
+                    (imageLoaded)="imageLoaded()"
+                    (cropperReady)="cropperReady()"
+                    (loadImageFailed)="loadImageFailed()"
+                ></image-cropper> 
+                
+                <img [src]="croppedImage" id="imagenRecortada"/>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="subirFoto()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
