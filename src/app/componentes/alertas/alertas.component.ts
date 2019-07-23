@@ -4,6 +4,7 @@ import { LoaderService } from 'src/app/services/loader.service';
 import { AuthService } from 'src/app/login/auth.service';
 import { UsuarioService } from 'src/app/services/usuarioService/usuario.service';
 import { Alerta } from './alertas';
+import { AlertaBasica } from './alertaBasica';
 
 @Component({
   selector: 'app-alertas',
@@ -11,7 +12,7 @@ import { Alerta } from './alertas';
   styleUrls: ['./alertas.component.css']
 })
 export class AlertasComponent implements OnInit {
-  alertas: Alerta[];
+  alertas: AlertaBasica[] = [];
   usuario: Usuario;
   constructor(
     private loader: LoaderService,
@@ -25,7 +26,7 @@ export class AlertasComponent implements OnInit {
     this.usuarioService.listarAlertasPorIdUsuario(this.usuario.usuaId).subscribe(
       response => {
         this.alertas = response
-        console.log("alertas -->> ",this.alertas)
+        console.log("alertas -->> ", this.alertas)
       }
     )
   }

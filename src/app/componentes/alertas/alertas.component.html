@@ -2,10 +2,22 @@
 
   <header class="tc-aside__header">
     <h3 class="tc-aside__title" style="color:red;">Alertas</h3>
-    <p class="tc-aside__txt" id="textoContador">tienes 1914 alertas registradas</p>
+    <p class="tc-aside__txt" id="textoContador">tienes {{alertas.length}} alertas registradas</p>
   </header>
-<div id="alertas" class="alturaDeAlertas" style="border-top: 1px solid rgb(162, 162, 162);">
-    <div class="tc-slot pointer"><div class="tc-slot__box"><div class="col-md-3 pad-0 end end-complement"><div class="rounded-circle mb-2 mr-2 alertaRoja"><span>-24</span></div></div><div class="tc-slot__caption spaceInLine col-md-9  pad-0" style="word-break: break-all;" > <p class="tc-slot__subtitle mb-0">Cierre Facturación punto de Venta</p><p class="tc-slot__txt mb-0">Responsable: Sofia Rodriguez</p></div></div></div>
-</div>
+  <div id="alertas" class="alturaDeAlertas" style="border-top: 1px solid rgb(162, 162, 162);">
+    <div class="tc-slot pointer" *ngFor="let alerta of alertas">
+      <div class="tc-slot__box">
+        <div class="col-md-3 pad-0 end end-complement">
+          <div class="rounded-circle mb-2 mr-2 alertaRoja">
+            <span>{{alerta.dias}}</span>
+          </div>
+        </div>
+        <div class="tc-slot__caption spaceInLine col-md-9  pad-0" style="word-break: break-all;">
+          <p class="tc-slot__subtitle mb-0">{{alerta.nombre}}</p>
+          <p class="tc-slot__txt mb-0">Responsable: {{alerta.usuario}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
