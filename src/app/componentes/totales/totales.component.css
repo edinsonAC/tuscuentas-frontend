@@ -249,3 +249,116 @@ a:not([href]):not([tabindex]) {
     border-radius: 12px !important;
     justify-content: end !important;
 }
+
+.ec-dropdown-item {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #223C61;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 0.8rem;
+    color: #223C61;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d5dcec;
+    border-radius: 0.25rem;
+}
+.dropdown-menu.tc-dropdown.show {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.tc-dropdown__container .tc-dropdown {
+    border-color: #B8E986;
+    width: 100%;
+    -webkit-box-shadow: 0px 6px 12px 2px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0px 6px 12px 2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 6px 12px 2px rgba(0, 0, 0, 0.06);
+}
+
+#liAtrasadas.btn-activo-li {
+    border: 2px solid red !important;
+}
+
+.btn.btn-outline.active.show {
+    box-shadow: none;
+}
+
+.btn-activo-li:nth-child(1) > a > i, .btn-activo-li:nth-child(1) > a > span > span {
+    color: #FF5447 !important;
+    font-weight: normal;
+}
+
+#liAbiertas.btn-activo-li {
+    border: 2px solid #73b52f !important;
+}
+
+.btn-activo-li:nth-child(2) > a > i, .btn-activo-li:nth-child(2) > a > span > span {
+    color: #43B036 !important;
+    font-weight: normal;
+}
+
+#liObservadas.btn-activo-li {
+    border: 2px solid blue !important;
+}
+
+.btn-activo-li:nth-child(3) > a > i, .btn-activo-li:nth-child(3) > a > span > span {
+    color: #275AD5 !important;
+    font-weight: normal;
+}
+
+.btn-activo-li {
+    border: 2px solid #ffb576;
+    border-radius: 5px !important;
+    box-shadow: 0px 6px 9px 5px #0000004d;
+    bottom: 2px;
+    position: relative;
+}
+
+.btn-activo-li:nth-child(4) > a > i, .btn-activo-li:nth-child(4) > a > span > span {
+    color: #FF9F47 !important;
+    font-weight: normal;
+}
+
+.btn-activo-li:nth-child(4) > a > i, .btn-activo-li:nth-child(4) > a > span > span {
+    color: #FF9F47 !important;
+    font-weight: normal;
+}
+
+#liCerradas.btn-activo-li {
+    border: 2px solid #54C287 !important;
+}
+
+.btn-activo-li:nth-child(5) > a > i, .btn-activo-li:nth-child(5) > a > span > span {
+    color: #54C287 !important;
+    font-weight: normal;
+}
+
+.btn-activo-li:nth-child(5) > a > i, .btn-activo-li:nth-child(5) > a > span > span {
+    color: #54C287 !important;
+    font-weight: normal;
+}

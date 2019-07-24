@@ -1,0 +1,47 @@
+<div class="card tc-card">
+  <div class="card-body  panel-tareas">
+    <div class="ordenTitulo">
+      <h4 class="green-title "> {{tituloListado}} </h4>
+      <div class="btn-tareas btn-flotante">
+        <a id="filter_tarea" onclick="popoverFiltrar(this)" class="btn-tareas-active plusC filter_tarea_class"><i
+            class="tu-icon-filter-homework"></i><label>Filtrar</label></a>
+        <a id="plusC" class="btn-tareas-active plusC" onclick="redireccionarCrearActividad();"><i
+            class="tu-icon-plus"></i><label>Añadir tarea</label></a>
+        <a hidden class="btn-tareas-active plusC solicitar" onclick="javascript:cargarPagina('pedir-contador.jsp')"><i
+            class="tu-icon-avion"></i><label>Solicitar al contador</label></a>
+        <a hidden class="btn-tareas-active plusC calificar"
+          onclick="javascript:cargarPagina('calificar_contador.jsp')"><i class="tu-icon-star"></i><label>Calificar al
+            contador</label></a>
+        <a class="btn-tareas-active"><i class="tu-icon-paper-list-pensil"></i><label>Mis tareas</label></a>
+        <a class="NotApply" onclick="redireccionarEmpresa2(empr_id, nombreEmpresa, 'liAbiertas');"><i
+            class="tu-icon-see-check"></i><label>Todas las tareas</label></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 ">
+        <table id="tablaAbiertas" class="table" style="width: 100%;">
+          <thead>
+            <tr>
+              <th>Tarea</th>
+              <th>Tiempo</th>
+              <th>Fecha Final</th>
+              <th>Empresa</th>
+              <th>Paso</th>
+              <th style="display: none;">Vista</th>
+            </tr>
+          </thead>
+          <tbody id="listadoTabla">
+            <tr *ngFor="let ejecucion of ejecuciones">
+              <td>{{ejecucion.tarea}}</td>
+              <td>{{ejecucion.dias}}</td>
+              <td>{{ejecucion.fechaFinal}}</td>
+              <td>{{ejecucion.empresa}}</td>
+              <td>{{ejecucion.paso}}</td>
+              <td>{{ejecucion.leido}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

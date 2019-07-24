@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 import { Menu } from 'src/app/componentes/menu/menu';
 import { Alerta } from 'src/app/componentes/alertas/alertas';
 import { AlertaBasica } from 'src/app/componentes/alertas/alertaBasica';
+import { ListadoEjecuciones } from 'src/app/componentes/list-tarea/listado-ejecuciones';
 
 const API_URL = environment.apiUrl + '/usuario';
 
@@ -48,5 +49,25 @@ export class UsuarioService {
 
   listarAlertasPorIdUsuario(id): Observable<AlertaBasica[]> {
     return this.http.get<AlertaBasica[]>(`${API_URL + '/listarAlertas'}/${id}`);
+  }
+
+  listarEjecucionesAbiertas(id, idEmpresa): Observable<ListadoEjecuciones[]> {
+    return this.http.get<ListadoEjecuciones[]>(`${API_URL + '/listarAbiertas'}/${id}/${idEmpresa}`);
+  }
+
+  listarEjecucionesAtrasadas(id, idEmpresa): Observable<ListadoEjecuciones[]> {
+    return this.http.get<ListadoEjecuciones[]>(`${API_URL + '/listarAtrasadas'}/${id}/${idEmpresa}`);
+  }
+
+  listarEjecucionesProximas(id, idEmpresa): Observable<ListadoEjecuciones[]> {
+    return this.http.get<ListadoEjecuciones[]>(`${API_URL + '/listarProximas'}/${id}/${idEmpresa}`);
+  }
+
+  listarEjecucionesObservadas(id, idEmpresa): Observable<ListadoEjecuciones[]> {
+    return this.http.get<ListadoEjecuciones[]>(`${API_URL + '/listarObservadas'}/${id}/${idEmpresa}`);
+  }
+
+  listarEjecucionesCerradas(id, idEmpresa): Observable<ListadoEjecuciones[]> {
+    return this.http.get<ListadoEjecuciones[]>(`${API_URL + '/listarCerradas'}/${id}/${idEmpresa}`);
   }
 }

@@ -1,0 +1,35 @@
+.ordenTitulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.btn-tareas {
+    color: #dddddd;
+    display: flex;
+}
+
+@media (max-width: 1920px) and (min-width: 768px){
+    .btn-tareas > a {
+        justify-content: center;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .btn-tareas > a > i {
+        font-size: 35px !important;
+    }
+}
+
+.btn-tareas-active {
+    color: #73b52f !important;
+    font-weight: 600;
+}
+
+.green-title {
+    color: #3F8827;
+}

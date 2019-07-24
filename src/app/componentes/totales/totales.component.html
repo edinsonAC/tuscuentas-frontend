@@ -53,39 +53,21 @@
         <i class="tu-icon-empresas tc-aside__icon"></i>
         <span class="tc-aside__btn-txt">
           <span class="tc-txtsmall" id="contEmp">Empresas registradas</span>
-          <div class="tc-txt" id="nombreEmpresa">Todas (5)</div>
+          <div class="tc-txt" id="nombreEmpresa">Todas ({{empresas.length}})</div>
           <i class="fa fa-sort-desc tc-aside__icon"></i>
         </span>
       </button>
-      <!-- <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola</button> -->
       <div class="dropdown-menu tc-dropdown" x-placement="bottom-start" id="todasEmpresas"
         style="position: absolute; transform: translate3d(0px, 56px, 0px); top: 0px; left: 0px; will-change: transform;">
-        <b class="tittleEmpresasH">Listas de empresas <button type="button" id="botonAll" class="botonXs" onclick=""><i
-              class="icon-close"></i></button></b><a class="dropdown-item ec-dropdown-item pointer"
-          id="todasEmpresasLabel" onclick="clickTodasContador();">Todas<i
-            class="fa fa-chevron-right tc-nav-item__icon"></i></a>
-        <div class="dropdown-divider ec-dropdown-divider"></div><a class="dropdown-item ec-dropdown-item pointer"
-          onclick="redireccionarEmpresa(3,'Batidos Cosechas' )" title="Batidos Cosechas">
-          <div class="cortarPalabra">Batidos Cosechas</div><i class="fa fa-chevron-right tc-nav-item__icon"></i>
-        </a>
-        <div class="dropdown-divider ec-dropdown-divider"></div><a class="dropdown-item ec-dropdown-item pointer"
-          onclick="redireccionarEmpresa(8,'Kreab Colombia SAS' )" title="Kreab Colombia SAS">
-          <div class="cortarPalabra">Kreab Colombia SAS</div><i class="fa fa-chevron-right tc-nav-item__icon"></i>
-        </a>
-        <div class="dropdown-divider ec-dropdown-divider"></div><a class="dropdown-item ec-dropdown-item pointer"
-          onclick="redireccionarEmpresa(44,'PRUEBA' )" title="PRUEBA">
-          <div class="cortarPalabra">PRUEBA</div><i class="fa fa-chevron-right tc-nav-item__icon"></i>
-        </a>
-        <div class="dropdown-divider ec-dropdown-divider"></div><a class="dropdown-item ec-dropdown-item pointer"
-          onclick="redireccionarEmpresa(43,'PRUEBA PRUEBA' )" title="PRUEBA PRUEBA">
-          <div class="cortarPalabra">PRUEBA PRUEBA</div><i class="fa fa-chevron-right tc-nav-item__icon"></i>
-        </a>
-        <div class="dropdown-divider ec-dropdown-divider"></div><a class="dropdown-item ec-dropdown-item pointer"
-          onclick="redireccionarEmpresa(2,'SebMar SAS' )" title="SebMar SAS">
-          <div class="cortarPalabra">SebMar SAS</div><i class="fa fa-chevron-right tc-nav-item__icon"></i>
-        </a>
-        <div class="dropdown-divider ec-dropdown-divider"></div><a class="dropdown-item ec-dropdown-item pointer"
-          onclick="redireccionarCrearEmpresa();">Crear empresa<i class="tu-icon-plus tc-nav-item__icon"></i></a>
+        <a (click)="seleccionarEmpresa(0)" class="dropdown-item ec-dropdown-item pointer"
+          id="todasEmpresasLabel">Todas<i class="fa fa-chevron-right tc-nav-item__icon"></i></a>
+        <div *ngFor="let empresa of empresas">
+          <div class="dropdown-divider ec-dropdown-divider"></div><a (click)="seleccionarEmpresa(empresa.idEmpresa)"
+            class="dropdown-item ec-dropdown-item pointer" title="{{empresa.nombreEmpresa}}">
+            <div class="cortarPalabra">{{empresa.nombreEmpresa}}</div><i
+              class="fa fa-chevron-right tc-nav-item__icon"></i>
+          </a>
+        </div>
       </div>
 
       <button class="tab-solid btn btn-block btn-primary tc-aside__btn" id="botonIn" onclick="cargarMenu();"
@@ -100,9 +82,10 @@
     <ul *ngIf="usuario.tipoUsuario.tiusId !='1'"
       class="nav nav-tabs tab-solid tab-solid-danger justify-content-between tap-unidos fixed-cj" id="usuarios"
       role="tablist">
-      <li class="nav-item pointer" id="liAtrasadas" onclick="redireccionarMisTareas(this.id); ponerEstilo(this.id);">
-        <a class="btn btn-outline" id="tab-5-1" data-toggle="tab" href="#tareas-5-2" role="tab"
-          aria-controls="tareas-5-2" aria-selected="true">
+      <li [className]="tipoTarea=='1' ? 'nav-item pointer btn-activo-li' : 'nav-item pointer'" id="liAtrasadas"
+        [routerLink]="['/listEjecuciones', usuario.usuaId,0,1]">
+        <a class="btn btn-outline" id="tab-5-1" data-toggle="tab" role="tab" aria-controls="tareas-5-2"
+          aria-selected="true">
           <i class="tu-icon-mail2"></i>
           <span class="tc-nav-item__body">
             Tareas atrasadas
@@ -112,7 +95,8 @@
           </span>
         </a>
       </li>
-      <li class="nav-item pointer" id="liAbiertas" onclick="redireccionarMisTareas(this.id); ponerEstilo(this.id);">
+      <li [className]="tipoTarea =='2' ? 'nav-item pointer btn-activo-li' : 'nav-item pointer'" id="liAbiertas"
+        [routerLink]="['/listEjecuciones', usuario.usuaId,0,2]">
         <a class="btn btn-outline" id="tab-5-2" data-toggle="tab" href="#tareas-5-1" role="tab"
           aria-controls="tareas-5-1" aria-selected="false">
           <i class="tu-icon-paper2"></i>
@@ -124,7 +108,8 @@
           </span>
         </a>
       </li>
-      <li class="nav-item pointer" id="liObservadas" onclick="redireccionarMisTareas(this.id); ponerEstilo(this.id);">
+      <li [className]="tipoTarea=='3' ? 'nav-item pointer btn-activo-li' : 'nav-item pointer'" id="liObservadas"
+        [routerLink]="['/listEjecuciones', usuario.usuaId,0,3]">
         <a class="btn btn-outline" id="tab-5-3" data-toggle="tab" href="#tareas-5-3" role="tab"
           aria-controls="tareas-5-3" aria-selected="false">
           <i class="tu-icon-hand "></i>
@@ -136,7 +121,8 @@
           </span>
         </a>
       </li>
-      <li class="nav-item pointer" id="liPendientes" onclick="redireccionarMisTareas(this.id);">
+      <li [className]="tipoTarea=='4' ? 'nav-item pointer btn-activo-li' : 'nav-item pointer'" id="liPendientes"
+        [routerLink]="['/listEjecuciones', usuario.usuaId,0,4]">
         <a class="btn btn-outline" id="tab-5-5" data-toggle="tab" href="#tareas-5-5" role="tab"
           aria-controls="tareas-5-5" aria-selected="false">
           <i class="tu-icon-bocina"></i>
@@ -148,7 +134,8 @@
           </span>
         </a>
       </li>
-      <li class="nav-item pointer" id="liCerradas" onclick="redireccionarMisTareas(this.id); ponerEstilo(this.id);">
+      <li [className]="tipoTarea=='5' ? 'nav-item pointer btn-activo-li' : 'nav-item pointer'" id="liCerradas"
+        [routerLink]="['/listEjecuciones', usuario.usuaId,0,5]">
         <a class="btn btn-outline" id="tab-5-5" data-toggle="tab" href="#tareas-5-4" role="tab"
           aria-controls="tareas-5-4" aria-selected="false">
           <i class="tu-icon-box"></i>

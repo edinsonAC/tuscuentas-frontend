@@ -23,6 +23,8 @@ import { TareaPredeterminadaComponent } from './componentes/tarea-predeterminada
 import { TareaEmpresaComponent } from './componentes/tarea-empresa/tarea-empresa.component';
 import { CalendarioFechaComponent } from './componentes/calendario-fecha/calendario-fecha.component';
 import { ProcesoComponent } from './componentes/proceso/proceso.component';
+import { ListTareaComponent } from './componentes/list-tarea/list-tarea.component';
+import { EmpresaComponent } from './componentes/empresa/empresa.component';
 
 
 const routes: Routes = [
@@ -32,6 +34,8 @@ const routes: Routes = [
   { path: 'usuario', component: UsuarioComponent },
   { path: 'totales', component: TotalesComponent },
   { path: 'menu', component: MenuComponent },
+  { path: 'ejecucion/:id', component: EjecucionTareaComponent },
+  { path: 'listEjecuciones/:id/:idEmpresa/:tipoTarea', component: ListTareaComponent },
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
 ]
@@ -52,7 +56,9 @@ const routes: Routes = [
     TareaPredeterminadaComponent,
     TareaEmpresaComponent,
     CalendarioFechaComponent,
-    ProcesoComponent
+    ProcesoComponent,
+    ListTareaComponent,
+    EmpresaComponent
   ],
   imports: [
     BrowserModule,
@@ -61,10 +67,11 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     PopoverModule,
-    ImageCropperModule 
+    ImageCropperModule
   ],
   providers: [
     UsuarioService,
+    TotalesComponent,
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],

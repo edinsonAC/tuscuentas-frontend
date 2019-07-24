@@ -28,4 +28,8 @@ export class TotalesService {
       map(response => response as Totales)
     );
   }
+
+  resaltarCasilla(tipo:number){
+
+  }
 }

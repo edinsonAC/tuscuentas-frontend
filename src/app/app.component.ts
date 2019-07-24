@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { AuthService } from './login/auth.service';
+import { ListTareaComponent } from './componentes/list-tarea/list-tarea.component';
+import { TotalesComponent } from './componentes/totales/totales.component';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +9,7 @@ import { AuthService } from './login/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-  title = 'tus-cuentas-frontend';
-
+  title = 'tus-cuentas |';
 
   constructor(private authService: AuthService) { }
 
