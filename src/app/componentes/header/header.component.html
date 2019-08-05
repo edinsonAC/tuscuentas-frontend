@@ -9,7 +9,7 @@
                     <span class="ec-hidden">tuscuentas.com</span>
                 </h1>
                 <i *ngIf="usuario.tipoUsuario.tiusId !='1'" class="tc-btn_flat tu-icon-gear pointer" id="botonMenu"
-                    onclick="cargarMenu();"></i>
+                [routerLink]="['/menu']"></i>
                 <i class="tc-btn_flat tu-icon-add-user pointer" id="botonVendedor"
                     onclick="javascript:cargarPagina('editar-contador-basico.jsp')" style="display: none;"></i>
                 <div class="nav-item dropdown">
@@ -33,8 +33,7 @@
 
             </div>
 
-            <div class="">
-
+            <div>
                 <div class="tc-header__caption tc-header__caption_2" id="div-calificacion" style="display: none;">
                     <i class="tu-icon-star tc-header__rating"></i>
                     <span class="tc-header__score" id="calificacion"></span>
@@ -58,13 +57,13 @@
                         <img id="imagenPerfil" height="100px" width="100px" alt="Avatar"
                             src="http://localhost:8080/api/usuario/upload/img/{{usuario.usuaImgperfil}}">
 
-                        <popover-content #myPopover placement="left" [animation]="true" [closeOnClickOutside]="true">
+                        <popover-content #myPopover placement="left" class="upstream" [animation]="true" [closeOnClickOutside]="true">
                             <div class="row">
                                 <div (click)="reset()" class="col-md-6 profile-bottom-img centrarDiv" id="img" data-toggle="modal"
                                     data-target="#exampleModalLong">
                                     <figure class="snip1205 rounded-circle"><img id="imgPerfil"
                                             class="preview preview--rounded"
-                                            src="http://localhost:8080/api/usuario/upload/img/{{usuario.usuaImgperfil}}"
+                                            src="urlImg{{usuario.usuaImgperfil}}"
                                             style="width: 60px;height: 60px;"><i class="fa fa-edit"></i>
                                     </figure>
                                 </div>
@@ -127,13 +126,7 @@
         </div>
         <!--creado btn menu-burguer-->
     </div>
-
-
-
-
-
 </nav>
-
 
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">

@@ -1,4 +1,5 @@
 import { TipoUsuario } from '../tipo-usuario/tipoUsuario';
+import { TipoDocumento } from './tipo-documento';
 
 export class Usuario {
     usuaId: string;
@@ -11,4 +12,5 @@ export class Usuario {
     usuaImgperfil: string;
     usuaUsuario: string;
     tipoUsuario: TipoUsuario;
+    tipoDocumento: TipoDocumento;
 }

@@ -81,3 +81,24 @@
 body{
     background-color: #eff3f5 !important;
 }
+
+.form-control:focus, .asColorPicker-input:focus, .dataTables_wrapper select:focus, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=text]:focus, .jsgrid .jsgrid-table .jsgrid-filter-row select:focus, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number]:focus, .select2-container--default .select2-selection--single:focus, .select2-container--default .select2-selection--single .select2-search__field:focus, .tt-hint:focus, .tt-query:focus, .typeahead:focus, button:focus, input, input:focus, select:focus, textarea:focus {
+    outline: none;
+    outline-width: 0;
+    outline-color: transparent;
+    box-shadow: none;
+    outline-style: none;
+}
+
+.input-c {
+    border-radius: 10px !important;
+}
+
+.btn-mini {
+    padding: 4px 11px !important;
+    border-radius: 5px;
+}
+
+.mr-2, .mx-2 {
+    margin-right: .5rem!important;
+}

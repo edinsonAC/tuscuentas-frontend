@@ -1,4 +1,6 @@
 import { Usuario } from '../usuario/usuario';
+import { CheckList } from './checklist';
+import { Paso } from './paso';
 
 export class EjecucionTarea {
     ejtaId: number;
@@ -17,8 +19,10 @@ export class EjecucionTarea {
     ejtaFecharegistro: string;
     ejtaHabil: number;
     ejtaLeido: number;
-    ejtaOrden: string;  
+    ejtaOrden: string;
     ejtaRegistradopor: string;
     taemId: string;
-    usuaId: Usuario; 
+    usuaId: Usuario;
+    checklist: CheckList[];
+    pasos:Paso[];
 }

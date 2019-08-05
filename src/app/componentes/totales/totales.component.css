@@ -362,3 +362,17 @@ a:not([href]):not([tabindex]) {
     color: #54C287 !important;
     font-weight: normal;
 }
+
+@media (max-width: 1920px) and (min-width: 768px){
+    .fixed-cj {
+        z-index: 20;
+        position: fixed;
+        right: 0;
+    }
+    
+}
+
+
+
+
+

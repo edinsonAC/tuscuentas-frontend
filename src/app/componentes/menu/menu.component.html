@@ -9,7 +9,7 @@
       <div class="row tc-config" style="margin-top: 0px;">
         <div *ngFor="let funcionalidad of menu.funcionalidads; let j = index" [className]="usuario.tipoUsuario.tiusId !='3' ? 'col-3 col-md-3 table-responsive' : '' " 
           style="margin-bottom: 10px;">
-          <a href="javascript:cargarPagina('<%=menu.get(i).getMenu().get(j).getFuncionalidad().get(k).getPagina()%>');"
+          <a  [routerLink]="['/usuario']"
             class="d-flex align-items-center flex-column">
             <!--<i class="fa fa-building tc-config__icon"></i>-->
             <img src="assets/images/{{funcionalidad.funcIcono}}" height="60%" width="50%">

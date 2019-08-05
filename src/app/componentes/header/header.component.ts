@@ -5,8 +5,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuarioService/usuario.service';
 import { Usuario } from '../usuario/usuario';
 import { ImageCroppedEvent } from 'ngx-image-cropper';
+import { environment } from 'src/environments/environment';
 
-
+const API_URL = environment.apiUrl;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -17,14 +18,11 @@ import { ImageCroppedEvent } from 'ngx-image-cropper';
 
 
 export class HeaderComponent implements OnInit { 
-  @ViewChild("myPopover")
-  public popover: ElementRef;
-
   fileImage: File;
   imageChangedEvent: any = '';
   croppedImage: any = '';
   usuario: Usuario;
-  urlImg: string = "http://localhost:8080/api/usuario/upload/img/";
+  urlImg: string = API_URL + "/usuario/upload/img/";
   private imagenSeleccionada: File;
 
   constructor(private authService: AuthService, private router: Router,
@@ -46,8 +44,6 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(): void {
-    console.log("logout ", this.popover);
-
     this.authService.logout();
     this.router.navigate(['/login'])
   }

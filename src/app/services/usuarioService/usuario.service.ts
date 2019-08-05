@@ -10,6 +10,10 @@ import { Menu } from 'src/app/componentes/menu/menu';
 import { Alerta } from 'src/app/componentes/alertas/alertas';
 import { AlertaBasica } from 'src/app/componentes/alertas/alertaBasica';
 import { ListadoEjecuciones } from 'src/app/componentes/list-tarea/listado-ejecuciones';
+import { TipoUsuario } from 'src/app/componentes/tipo-usuario/tipoUsuario';
+import { TipoDocumento } from 'src/app/componentes/usuario/tipo-documento';
+import { Municipio } from 'src/app/componentes/util/municipio';
+import { Departamento } from 'src/app/componentes/util/departamento';
 
 const API_URL = environment.apiUrl + '/usuario';
 
@@ -17,6 +21,16 @@ const API_URL = environment.apiUrl + '/usuario';
 export class UsuarioService {
 
   constructor(private http: HttpClient, private router: Router, private authService: AuthService) { }
+
+  listarTipoUsuario(): Observable<TipoUsuario[]> {
+    return this.http.get<TipoUsuario[]>(`${API_URL + '/listarTipoUsuario'}/${this.authService.usuario.tipoUsuario.tiusId}`);
+  }
+
+
+  listarTipoDocumento(): Observable<TipoDocumento[]> {
+    return this.http.get<TipoDocumento[]>(API_URL + '/listarTipoDocumento');
+  }
+
 
   getUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(API_URL + '/listarUsuarios');
@@ -70,4 +84,13 @@ export class UsuarioService {
   listarEjecucionesCerradas(id, idEmpresa): Observable<ListadoEjecuciones[]> {
     return this.http.get<ListadoEjecuciones[]>(`${API_URL + '/listarCerradas'}/${id}/${idEmpresa}`);
   }
+
+  listarMunicipiosPorDepartamento(id): Observable<Municipio[]> {
+    console.log("service ---------->", id)
+    return this.http.get<Municipio[]>(`${API_URL + '/listarMunicipios'}/${id}`);
+  }
+  listarDepartamentos(): Observable<Departamento[]> {
+    return this.http.get<Departamento[]>(`${API_URL + '/listarDepartamentos'}`);
+  }
+
 }

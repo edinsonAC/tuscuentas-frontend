@@ -1,0 +1,68 @@
+#tituloForm {
+    color: #626659;
+}
+.card-title {
+    color: #3F8827;
+}
+.card-title {
+    margin-bottom: 1.125rem;
+    text-transform: capitalize;
+}
+
+element.style {
+    justify-content: space-between;
+}
+@media (max-width: 1920px) and (min-width: 768px){
+.card-body > .row, .dataTables_wrapper > div:nth-child(3), .dataTables_wrapper > div:nth-child(1), .table-responsive {
+    padding: 0px 6px 0px 6px !important;
+}
+}
+
+.margintop10px{
+        justify-content: space-between;
+}
+
+#reg_usuario, #reg_usuario2 {
+    width: 80%;
+    padding: 10px 20px;
+    margin: auto;
+    background: #FBFBFB;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 1920px) and (min-width: 768px){
+#reg_usuario > div > div:first-child {
+    padding-right: 5%;
+}
+}
+@media (min-width: 768px){
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    line-height: 1;
+    vertical-align: top;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+#boton {
+    background: #43B036;
+    color: white;
+    border-radius: 5px;
+}

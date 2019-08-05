@@ -32,12 +32,12 @@
           </thead>
           <tbody id="listadoTabla">
             <tr *ngFor="let ejecucion of ejecuciones">
-              <td>{{ejecucion.tarea}}</td>
-              <td>{{ejecucion.dias}}</td>
-              <td>{{ejecucion.fechaFinal}}</td>
-              <td>{{ejecucion.empresa}}</td>
-              <td>{{ejecucion.paso}}</td>
-              <td>{{ejecucion.leido}}</td>
+              <td class="pointer" [routerLink]="['/ejecucion', ejecucion.idEjecucion]" >{{ejecucion.tarea}}</td>
+              <td class="pointer" [routerLink]="['/ejecucion', ejecucion.idEjecucion]">{{ejecucion.dias}}</td>
+              <td class="pointer" [routerLink]="['/ejecucion', ejecucion.idEjecucion]">{{ejecucion.fechaFinal}}</td>
+              <td class="pointer" [routerLink]="['/ejecucion', ejecucion.idEjecucion]">{{ejecucion.empresa}}</td>
+              <td class="pointer" [routerLink]="['/ejecucion', ejecucion.idEjecucion]">{{ejecucion.paso}}</td>
+              <td class="pointer" [routerLink]="['/ejecucion', ejecucion.idEjecucion]">{{ejecucion.leido}}</td>
             </tr>
           </tbody>
         </table>

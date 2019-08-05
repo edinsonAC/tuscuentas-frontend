@@ -25,6 +25,8 @@ import { CalendarioFechaComponent } from './componentes/calendario-fecha/calenda
 import { ProcesoComponent } from './componentes/proceso/proceso.component';
 import { ListTareaComponent } from './componentes/list-tarea/list-tarea.component';
 import { EmpresaComponent } from './componentes/empresa/empresa.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DropdownModule} from 'primeng/dropdown';
 
 
 const routes: Routes = [
@@ -62,12 +64,14 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule,
     PopoverModule,
-    ImageCropperModule
+    ImageCropperModule,
+    DropdownModule
   ],
   providers: [
     UsuarioService,
